@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #666;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.panels {
+    display: flex;
+    gap: 20px;
+}
+
+.panel {
+    flex: 1;
+    border: 2px solid #999;
+    padding: 20px;
+    background-color: #fafafa;
+}
+
+.panel h2 {
+    margin-top: 0;
+    color: #444;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: monospace;
+    font-size: 12px;
+    border: 1px solid #999;
+    padding: 10px;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+input[type="password"] {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 12px;
+    border: 1px solid #999;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.key-input {
+    height: 120px;
+}
+
+.message-input {
+    height: 100px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.output-area {
+    height: 150px;
+    background-color: #f9f9f9;
+    font-family: monospace;
+    font-size: 11px;
+}
+
+button {
+    background-color: #ddd;
+    border: 2px outset #ddd;
+    padding: 10px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+button:hover {
+    background-color: #ccc;
+}
+
+button:active {
+    border: 2px inset #ddd;
+}
+
+.copy-button {
+    padding: 5px 10px;
+    font-size: 12px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.error {
+    color: red;
+    background-color: #ffe6e6;
+    border: 1px solid red;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.success {
+    color: green;
+    background-color: #e6ffe6;
+    border: 1px solid green;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    color: #666;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .panels {
+        flex-direction: column;
+    }
+    
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+}

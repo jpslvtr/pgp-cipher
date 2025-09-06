@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple PGP Tool</title>
+    <script src="https://unpkg.com/openpgp@5.11.0/dist/openpgp.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>PGP Cipher</h1>
+
+        <div class="panels">
+            <div class="panel">
+                <h2>Encrypt Message</h2>
+
+                <label>Recipient's Public Key:</label>
+                <textarea id="recipientPublicKey" class="key-input"
+                    placeholder="-----BEGIN PGP PUBLIC KEY BLOCK-----&#10;&#10;recipient's public key&#10;&#10;-----END PGP PUBLIC KEY BLOCK-----"></textarea>
+
+                <label>Message to Encrypt:</label>
+                <textarea id="messageToEncrypt" class="message-input"
+                    placeholder="Type your message here..."></textarea>
+
+                <button onclick="encryptMessage()">Encrypt Message</button>
+
+                <label>Encrypted Output:</label>
+                <textarea id="encryptedOutput" class="output-area" readonly
+                    placeholder="Encrypted message will appear here..."></textarea>
+
+                <div id="encryptStatus"></div>
+            </div>
+
+            <div class="panel">
+                <h2>Decrypt Message</h2>
+
+                <label>Your Private Key:</label>
+                <textarea id="yourPrivateKey" class="key-input"
+                    placeholder="-----BEGIN PGP PRIVATE KEY BLOCK-----&#10;&#10;your private key&#10;&#10;-----END PGP PRIVATE KEY BLOCK-----"></textarea>
+
+                <label>Passphrase (if any):</label>
+                <input type="password" id="privateKeyPassphrase"
+                    placeholder="Private key passphrase (leave blank if none)">
+
+                <label>Encrypted Message:</label>
+                <textarea id="encryptedInput" class="message-input"
+                    placeholder="Paste encrypted message here..."></textarea>
+
+                <button onclick="decryptMessage()">Decrypt Message</button>
+
+                <label>Decrypted Output:</label>
+                <textarea id="decryptedOutput" class="output-area" readonly
+                    placeholder="Decrypted message will appear here..."></textarea>
+
+                <div id="decryptStatus"></div>
+            </div>
+        </div>
+
+        <div class="footer">
+            © 2025 James Park
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
