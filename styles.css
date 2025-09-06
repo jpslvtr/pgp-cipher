@@ -52,6 +52,7 @@ textarea {
 input[type="password"] {
     width: 100%;
     box-sizing: border-box;
+    font-family: monospace;
     font-size: 12px;
     border: 1px solid #999;
     padding: 10px;
@@ -64,15 +65,11 @@ input[type="password"] {
 
 .message-input {
     height: 100px;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
 }
 
 .output-area {
     height: 150px;
     background-color: #f9f9f9;
-    font-family: monospace;
-    font-size: 11px;
 }
 
 button {

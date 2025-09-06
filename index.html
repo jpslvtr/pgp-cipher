@@ -29,7 +29,7 @@
 
                 <label>Encrypted Output:</label>
                 <textarea id="encryptedOutput" class="output-area" readonly
-                    placeholder="Encrypted message will appear here..."></textarea>
+                    placeholder="-----BEGIN PGP MESSAGE-----&#10;&#10;encrypted message will appear here&#10;&#10;-----END PGP MESSAGE-----"></textarea>
 
                 <div id="encryptStatus"></div>
             </div>
@@ -47,7 +47,7 @@
 
                 <label>Encrypted Message:</label>
                 <textarea id="encryptedInput" class="message-input"
-                    placeholder="Paste encrypted message here..."></textarea>
+                    placeholder="-----BEGIN PGP MESSAGE-----&#10;&#10;paste encrypted message here&#10;&#10;-----END PGP MESSAGE-----"></textarea>
 
                 <button onclick="decryptMessage()">Decrypt Message</button>
 

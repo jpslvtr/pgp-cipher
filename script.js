@@ -48,8 +48,18 @@ async function decryptMessage() {
 
         let decryptedPrivateKey;
         if (parsedPrivateKey.isDecrypted()) {
+            // Key has no passphrase protection
+            if (passphrase && passphrase.trim() !== '') {
+                document.getElementById('decryptStatus').innerHTML = '<div class="error">This private key has no passphrase protection. Leave passphrase field empty.</div>';
+                return;
+            }
             decryptedPrivateKey = parsedPrivateKey;
         } else {
+            // Key requires passphrase
+            if (!passphrase || passphrase.trim() === '') {
+                document.getElementById('decryptStatus').innerHTML = '<div class="error">This private key requires a passphrase. Please enter it.</div>';
+                return;
+            }
             decryptedPrivateKey = await openpgp.decryptKey({
                 privateKey: parsedPrivateKey,
                 passphrase: passphrase
