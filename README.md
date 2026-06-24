@@ -1,7 +1,7 @@
 # pgp-cipher
 
 A minimal, browser-based tool for PGP encryption and decryption. All
-cryptography runs locally in your browser — no keys or messages are ever
+cryptography runs locally in your browser - no keys or messages are ever
 sent to a server.
 
 ## Features
